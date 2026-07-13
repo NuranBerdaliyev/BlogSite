@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def first_view(request):
-    return HttpResponse("The main page")
-def second_view(request):
-    return HttpResponse("About us")
+def main(request):
+    return render(request, 'blog_app/main.html')
+def about(request):
+    return render(request, 'blog_app/about.html')
